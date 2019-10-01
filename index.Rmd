@@ -20,7 +20,7 @@ colorlinks: yes
 bibliography:  
 - style/book.bib
 - style/pkgs.bib
-csl: https://www.zotero.org/styles/iica-catie
+csl: https://www.zotero.org/styles/apa
 # browseURL("https://www.zotero.org/styles")
 ---
 
