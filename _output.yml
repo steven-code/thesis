@@ -1,0 +1,25 @@
+bookdown::gitbook:
+  css: style/style.css
+  split_by: chapter # chapter none
+  split_bib: TRUE
+  config:
+    toc:
+      collapse: section
+      scroll_highlight: yes
+      before: |
+        <li> <a href="http://www.lozanoisla.com" target="blank"> Flavio Lozano Isla </a> </li>
+      after:  |
+        <li> <a href="https://www.zotero.org/groups/2357559/rticles?" target="blank"> zotero/rticles </a> </li>
+    fontsettings:
+      theme: sepia
+      family: sans
+      size: 2
+    search: yes
+    edit: https://github.com/Flavjack/rticles/blob/master/%s
+    download: 
+      - ["thesis.docx", "word"]
+      - ["../img/files.zip", "files"]
+    sharing:
+      github: yes
+      twitter: no
+      facebook: no

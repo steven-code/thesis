@@ -1,0 +1,150 @@
+---
+title: "UNIVERSIDAD NACIONAL AGRARIA LA MOLINA <br> FACULTAD DE AGRONOMIA <br> `r if (!knitr:::is_html_output()) knitr::include_graphics('img/unalm.png')`"
+subtitle: "PROYECTO DE TESIS <br> FERTILIZACION FOLIAR CON ZINC EN EL CULTIVO DE AJI ESCABECHE (*Capsicum baccatum* L. var. *pendulum* (Willd) Eshbaugh), EN CONDICIONES DE AGRICULTURA ORGANICA"
+author: "EJECUTOR <br> FLAVIO LOZANO ISLA <br> ASESOR <br> RAÚL BLAS SEVILLANO"
+date: "LIMA-PERU <br> `r Sys.Date()`"
+description: document template for scientific report
+github-repo: flavjack/thesis/issues
+cover-image: img/cover.jpg
+favicon: img/icon.png
+url: https\://www.lozanoisla.com
+site: bookdown::bookdown_site
+documentclass: book
+bookdown::gitbook:
+output:
+  bookdown::word_document2:
+    reference_docx: style/style_thesis.docx
+always_allow_html: yes
+link-citations: yes
+colorlinks: yes
+bibliography:  
+- style/book.bib
+- style/pkgs.bib
+csl: https://www.zotero.org/styles/iica-catie
+# browseURL("https://www.zotero.org/styles")
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(fig.align = "center",
+	echo = FALSE, message = FALSE, warning = FALSE)
+
+options(digits = 4, OutDec= ".",
+        knitr.kable.NA = '',
+        knitr.table.format = "pandoc", 
+        citr.use_betterbiblatex = FALSE)
+
+library(bookdown)
+library(citr)
+library(inserttable) # devtools::install_github("lbusett/insert_table")
+library(tidyverse)
+library(knitr)
+library(cowplot)
+library(grid)
+library(png)
+library(jpeg)
+
+```
+
+# INDICE GENERAL {-}
+
+I
+
+# INDICE DE TABLAS {-}
+
+T
+
+# INDICE DE FIGURAS {-}
+
+F
+
+# RESUMEN {-}
+
+Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. _Nulla facilisi_ Ut fringilla. **Suspendisse potenti** Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. 
+
+**Keywords:** Lorem, ipsum, dolor, sit amet, consectetur.
+
+# Introduction
+
+Lorem ipsum @lozano-isla2018Effects dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc [@maluszynski2009Methodologies; @pompelliAllometricModelsNondestructive2012]. 
+
+Curabitur tortor [@avenot2009Characterizationa; @zarate2017Respuesta] Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrice. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. 
+
+# Materials and Methods
+
+The data was analyzed in the statistical software R [@R-base]. The germination analysis and graphics was carried out with the package GerminaR [@blum2005Drought]. Each variable was submitted at analysis of variance (ANOVA) and the mean comparison test used was Student-Newman Keuls (P<0.05)[@R-tibble]. For the multivariate analysis, the principal components analysis (PCA) and cluster hierarchical classification analysis (HCPC) will be used [@gutierrez2018Contribution]. 
+
+The vertical bars represent the means (±SE). The mean differences between the groups are represented by different capital letters and into the group different lowercase letters (SNK, p = 0.05) [@gutierrez2018Contribution].
+
+## Nulla metus metus
+
+Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante (Table \@ref(tab:functions)).
+
+# Results
+
+##  Sed convallis tristique sem
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos $g=\left(\frac{\sum_{i=1}^kn_1}{N}\right)100$. 
+
+Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. 
+
+```{r jcrc, fig.align='center', fig.cap= "Plant of *Jatropha curcas*. A) Foliage, B) Leaf, C) Fruit."}
+
+fg <- jpeg::readJPEG("img/fig_jc.jpg") %>% 
+  grid::rasterGrob(interpolate = TRUE)
+
+plot <- cowplot::ggdraw(xlim = c(0, 0.5), ylim = c(0, 0.5))+
+  draw_plot(fg, width = 0.5, height = 0.5, x = 0.0, y = 0.0) +
+  draw_plot_label(label = c("A", "B", "C"),
+                  x = c(0.01, 0.26, 0.01), 
+                  y = c(0.48, 0.48, 0.15))
+
+save_plot("img/files/fig_jcurcas.png", 
+          plot = plot,
+          dpi= 300, 
+          base_height = 100, 
+          base_aspect_ratio = 1.2, 
+          units = "mm")
+
+include_graphics("img/files/fig_jcurcas.png")
+
+```
+
+##  Class aptent taciti
+
+Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Figure: \@ref(fig:jcrc). 
+
+```{r tab1}
+
+tibble::tribble(
+            ~" ",                  ~" ",
+       "Reino",           "*Plantae*",
+    "División",     "*Magnoliophyta*",
+       "Clase",     "*Magnoliopsida*",
+    "Subclase",         "*Asteridae*",
+       "Orden",         "*Solanales*",
+     "Familia",        "*Solanaceae*",
+  "Subfamilia",       "*Solanoideae*",
+       "Tribu",         "*Capsiceae*",
+      "Género",          "*apsicum*",
+     "Especie", "*Capsicum baccatum*"
+  ) %>% kable(caption = "Clasificación taxonómica del ají escabeche (*Capsicum baccatum* L. var. pendulum (Willd) Eshbaugh)")
+
+```
+
+**Nombre común:** Ají escabeche, ají amarillo (fresco), ají mirasol (seco) 
+
+
+# Discussion
+
+Curabitur tortor @leon2018Nitrogen and @dixit2015Adaptacion, Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante (Table \@ref(tab:tab1)).
+
+Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor [@blum2005Drought]. 
+
+# Conclusions
+
+Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. 
+
+
+
+

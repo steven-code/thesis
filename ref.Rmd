@@ -1,0 +1,18 @@
+
+`r if (knitr:::is_html_output()) '# Referencias'`
+`r if (!knitr:::is_html_output()) '# Referencias'`
+
+```{r include=FALSE}
+
+knitr::write_bib(c(.packages()),'style/pkgs.bib')
+
+```
+
+```{r}
+
+dir.create("img")
+dir.create("img/files")
+zip::zipr(zipfile = "img/files.zip", files = "img/files")
+
+```
+
